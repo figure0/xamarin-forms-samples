@@ -12,9 +12,9 @@ using Xamarin.Forms.Platform.Android;
 
 namespace ScaleAndRotate.Droid
 {
-    [Activity(Label = "ScaleAndRotate", MainLauncher = true, 
+    [Activity(Label = "ScaleAndRotate", Theme = "@style/MainTheme", MainLauncher = true, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : FormsApplicationActivity
+	public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

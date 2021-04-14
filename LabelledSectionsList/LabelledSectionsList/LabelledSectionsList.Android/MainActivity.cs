@@ -11,8 +11,8 @@ using Xamarin.Forms.Platform.Android;
 
 namespace LabelledSections.Droid
 {
-    [Activity(Label = "LabelledSections", MainLauncher = true)]
-    public class MainActivity : FormsApplicationActivity
+    [Activity(Label = "LabelledSections", Theme = "@style/MainTheme", MainLauncher = true)]
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

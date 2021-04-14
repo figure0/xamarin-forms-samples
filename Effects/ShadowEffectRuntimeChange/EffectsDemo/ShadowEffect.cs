@@ -1,8 +1,10 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace EffectsDemo
 {
+	[Preserve(AllMembers = true)]
 	public static class ShadowEffect
 	{
 		public static readonly BindableProperty HasShadowProperty = BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false, propertyChanged: OnHasShadowChanged);
@@ -81,7 +83,7 @@ namespace EffectsDemo
 
 		class LabelShadowEffect : RoutingEffect
 		{
-			public LabelShadowEffect () : base ("Xamarin.LabelShadowEffect")
+			public LabelShadowEffect () : base ("MyCompany.LabelShadowEffect")
 			{
 			}
 		}

@@ -9,9 +9,7 @@ namespace WebViewSample
 		public LinkToInAppCode ()
 		{
 			this.Title = "In-App Browser Demo";
-			this.Padding = new Thickness (10);
-
-			var layout = new StackLayout ();
+            var layout = new StackLayout { Margin = new Thickness(20) };
 
 			var label = new Label () {
 				Text = "This demonstrates how you would open a link without leaving your app, while giving users a good experience."
@@ -30,7 +28,7 @@ namespace WebViewSample
 		/// </summary>
 		void navButtonClicked (object sender, EventArgs e)
 		{
-			this.Navigation.PushAsync (new InAppBrowserCode ("http://www.xamarin.com/"));
+			this.Navigation.PushAsync (new InAppBrowserCode ("https://dotnet.microsoft.com/apps/xamarin"));
 		}
 	}
 }

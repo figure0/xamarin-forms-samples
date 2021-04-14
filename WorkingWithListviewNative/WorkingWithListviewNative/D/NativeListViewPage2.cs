@@ -1,18 +1,14 @@
-﻿using System;
-
-using Xamarin.Forms;
-using System.Collections.Generic;
+﻿using Xamarin.Forms;
 
 namespace WorkingWithListviewNative
 {
-
 	/// <summary>
 	/// This page uses a custom renderer that wraps native list controls:
 	///    iOS :           UITableView
 	///    Android :       ListView   (do not confuse with Xamarin.Forms ListView)
-	///    Windows Phone : ?
-	/// 
-	/// It uses a CUSTOM row/cell class that is defined natively which 
+	///    Windows Phone : ListView
+	///
+	/// It uses a CUSTOM row/cell class that is defined natively which
 	/// is still faster than a Xamarin.Forms-defined ViewCell subclass.
 	/// </summary>
 	public class NativeListViewPage2 : ContentPage
@@ -32,11 +28,12 @@ namespace WorkingWithListviewNative
 
 			// The root page of your application
 			Content = new StackLayout {
-				Padding = new Thickness (0, Device.OnPlatform (20, 0, 0), 0, 0),
+				Padding = new Thickness(0, Device.RuntimePlatform == Device.iOS ? 20 : 0, 0, 0),
 				Children = {
 					new Label {
 						HorizontalTextAlignment = TextAlignment.Center,
-						Text = Device.OnPlatform ("Custom UITableView+UICell", "Custom ListView+Cell", "Custom renderer todo")
+						Text = Device.RuntimePlatform == Device.iOS ? "Custom UITableView+UICell" :
+									 Device.RuntimePlatform == Device.Android ? "Custom ListView+Cell" : "Custom renderer ListView+DataTemplate"
 					},
 					nativeListView2
 				}
@@ -44,5 +41,3 @@ namespace WorkingWithListviewNative
 		}
 	}
 }
-
-

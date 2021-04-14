@@ -12,9 +12,9 @@ using Xamarin.Forms.Platform.Android;
 
 namespace ClassHierarchy.Android
 {
-    [Activity(Label = "ClassHierarchy", MainLauncher = true, 
+    [Activity(Label = "ClassHierarchy", Theme = "@style/MainTheme", MainLauncher = true, 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : FormsApplicationActivity
+	public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

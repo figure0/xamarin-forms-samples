@@ -10,7 +10,7 @@ The ASMX service, available at ~/TodoService.asmx, provides the following operat
 - EditTodoItem - updates a todo item
 - DeleteTodoItem - deletes a todo item
 
-For more information about the sample see [Consuming an ASP.NET Web Service (ASMX)](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/web-services/consuming/asmx/).
+For more information about the sample see [Consuming an ASP.NET Web Service (ASMX)](https://docs.microsoft.com/xamarin/xamarin-forms/data-cloud/web-services/asmx).
 
 Setting up the ASMX service
 ---------------------------
@@ -30,11 +30,6 @@ The accompanying Xamarin.Forms sample application consumes a Xamarin-hosted ASMX
 1. In the *Create Web App on Microsoft Azure* dialog, ensure that the *Database server* drop-down is set to *No database*.
 1. In the *Create Web App on Microsoft Azure* dialog, click the *Create* button to create the web app in the specified Azure region.
 1. In the *Publish Web* dialog, click the *Publish* button to publish the ASMX service to the web app created in the previous step.
-1. In *Xamarin Studio* or *Visual Studio*, load the *TodoASMX solution*, expand the *TodoASMX* project and update the `Constants.SoapUrl` property to the address of the web app created in the previous steps.
+1. In *Visual Studio* or *Visual Studio for Mac*, load the *TodoASMX solution*, expand the *TodoASMX* project and update the `Constants.SoapUrl` property to the address of the web app created in the previous steps.
 
 For more information about publishing to an Azure Web App, see [Creating an ASP.NET web app in Azure App Service](https://azure.microsoft.com/en-gb/documentation/articles/web-sites-dotnet-get-started/#create-an-aspnet-web-application).
-
-Author
-------
-
-David Britch

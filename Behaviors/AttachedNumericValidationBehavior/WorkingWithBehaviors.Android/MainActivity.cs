@@ -1,21 +1,14 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-
 using Xamarin.Forms.Platform.Android;
 
-namespace WorkingWithBehaviors
+namespace AttachedNumericValidationBehavior.Droid
 {
-    [Activity(Label = "Behaviors", 
-		MainLauncher = true,
-		ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize
-	)]
-	public class MainActivity : FormsApplicationActivity
+    [Activity(Label = "Behaviors",
+        Theme = "@style/MainTheme", MainLauncher = true,
+        ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize
+    )]
+    public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -23,8 +16,7 @@ namespace WorkingWithBehaviors
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-			LoadApplication (new App ());
+            LoadApplication(new App());
         }
     }
 }
-

@@ -12,9 +12,9 @@ using Xamarin.Forms.Platform.Android;
 
 namespace BugSweeper.Droid
 {
-    [Activity(Label = "BugSweeper", MainLauncher = true,
+    [Activity(Label = "BugSweeper", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : FormsApplicationActivity
+	public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

@@ -27,15 +27,9 @@ namespace TodoASMX
 			await Navigation.PopAsync ();
 		}
 
-		void OnCancelActivated (object sender, EventArgs e)
+		async void OnCancelActivated (object sender, EventArgs e)
 		{
-			Navigation.PopAsync ();
-		}
-
-		void OnSpeakActivated (object sender, EventArgs e)
-		{
-			var todoItem = (TodoItem)BindingContext;
-			App.Speech.Speak (todoItem.Name + " " + todoItem.Notes);
+			await Navigation.PopAsync ();
 		}
 	}
 }

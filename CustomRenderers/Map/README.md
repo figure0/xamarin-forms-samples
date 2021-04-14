@@ -1,11 +1,22 @@
-Map Custom Renderer
-===================
+---
+name: Xamarin.Forms - Map Custom Renderer
+description: "Demonstrates how to create a custom renderer for the Map control, which displays a native map with a customized pin"
+page_type: sample
+languages:
+- csharp
+products:
+- xamarin
+extensions:
+    tags:
+    - map
+    - customrenderer
+urlFragment: customrenderers-map-pin
+---
+# Map Custom Renderer
 
-This sample demonstrates a custom renderer for the `Map` control, enabling developers to override the default native rendering with their own platform-specific customization.
+This sample demonstrates how to create a custom renderer for the `Map` control, which displays a native map with a customized pin and a customized view of the pin data on each platform.
 
-For more information about this sample see [Customizing a Map](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/custom-renderer/map/).
+For more information about this sample see [Customizing a Map Pin](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin).
 
-Author
-------
+![Map Custom Renderer application screenshot](Screenshots/01All.png "Map Custom Renderer application screenshot")
 
-David Britch
